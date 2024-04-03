@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Input Teks</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    .container {
+        max-width: 400px;
+        margin: 50px auto;
+        text-align: center;
+    }
+    input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        box-sizing: border-box;
+    }
+    button {
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+    }
+    button:hover {
+        background-color: #0056b3;
+    }
+    #output {
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <input type="text" id="inputText" placeholder="Masukkan teks...">
+    <button id="showTextButton">Tampilkan</button>
+    <div id="output"></div>
+</div>
+<script>
+    document.getElementById('showTextButton').addEventListener('click', function() {
+        var inputText = document.getElementById("inputText").value;
+        var outputDiv = document.getElementById("output");
+        outputDiv.innerHTML = "<p>" + inputText + "</p>";
+    });
+</script>
+</body>
+</html>
